@@ -3,19 +3,19 @@
   --text: #1a1a1a;
   --primary: #007bff;
   --accent: #ff6b6b;
-  --card-bg: #ffffff;
+  --card-bg: #dcf8e7;
   --border: #e0e0e0;
 
-  --about-bg: #e3f2fd; /* Same as hero background */
-  --skills-bg: #e0f7fa;
+  --about-bg:  #bee0f8; /* Same as hero background */
+  --skills-bg: #c7f4fa;
   --projects-bg: #f3e5f5;
   --gallery-bg: #fff3e0;
-  --contact-bg: #e8f5e9;
+  --contact-bg: #e8fcea;
 }
 
 body.dark {
   --bg: #121212;
-  --text: #f1f1f1;
+  --text: #ccc1c1;
   --primary: #00c6ff;
   --accent: #ff8c42;
   --card-bg: #1f1f1f;
@@ -25,7 +25,7 @@ body.dark {
   --skills-bg: #1c313a;
   --projects-bg: #311b3f;
   --gallery-bg: #3e2723;
-  --contact-bg: #1b5e20;
+  --contact-bg: #0d363d;
 }
 
 * {
@@ -122,7 +122,7 @@ nav button {
   justify-content: space-between;
   min-height: 100vh;
   padding: 60px;
-  background: linear-gradient(to right, #e3f2fd, #e8eaf6);
+  background: linear-gradient(to right, #bee0f8, #e8eaf6);
 }
 .hero-text {
   flex: 1;
