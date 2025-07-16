@@ -2,7 +2,7 @@ function toggleMode() {
   document.body.classList.toggle('dark');
 }
 
-// Confetti Celebration on Page Load
+// Confetti Effect on Load
 window.onload = function () {
   const popup = document.getElementById('welcome-popup');
   for (let i = 0; i < 30; i++) {
@@ -12,12 +12,11 @@ window.onload = function () {
     confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 70%, 60%)`;
     popup.appendChild(confetti);
   }
-}
+};
 
 // Scroll Reveal Animations
 ScrollReveal().reveal('.hero-text', { delay: 100, origin: 'left', distance: '50px' });
-ScrollReveal().reveal('.hero-img', { delay: 200, origin: 'right', distance: '50px' });
-ScrollReveal().reveal('#about', { delay: 300, origin: 'bottom' });
+ScrollReveal().reveal('#about', { delay: 200, origin: 'bottom' });
 ScrollReveal().reveal('.skills-grid .skill-card', { interval: 100 });
 ScrollReveal().reveal('.project-card', { interval: 150 });
 ScrollReveal().reveal('#gallery', { delay: 400 });
