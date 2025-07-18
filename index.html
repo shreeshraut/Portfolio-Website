@@ -1,177 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
-  <title>Shreesh Raut</title>
+  <meta charset="utf-8" />
+  <title>Shreesh Raut | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
   <script src="https://unpkg.com/scrollreveal"></script>
 </head>
-<body>
+<body id="top">
 
-  <!-- 🎉 Welcome Animation Popup -->
+  <!-- Welcome Popup -->
   <div id="welcome-popup">🎉 Welcome to My Portfolio! 🎉</div>
 
   <!-- Header -->
   <header>
-    <div class="logo">Shreesh Raut</div>
-    <nav class="main-nav">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#contact">Contact</a>
-      <button type="button" onclick="toggleMode()">🌗</button>
-    </nav>
+    <div class="header-inner">
+      <a href="#top" class="logo">Shreesh<br>Raut</a>
+
+      <!-- Dark Mode always visible -->
+      <button type="button" class="mode-btn" onclick="toggleMode()">🌗</button>
+
+      <!-- Mobile Menu Toggle -->
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" onclick="toggleNav()">☰</button>
+
+      <!-- Main Nav -->
+      <nav id="main-nav" class="main-nav">
+        <a href="#about" onclick="closeNav()">About</a>
+        <a href="#skills" onclick="closeNav()">Skills</a>
+        <a href="#projects" onclick="closeNav()">Projects</a>
+        <a href="#gallery" onclick="closeNav()">Gallery</a>
+        <a href="#contact" onclick="closeNav()">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- HERO Section with Background Video -->
+  <!-- Hero -->
   <section class="hero" id="home">
-    <video
-      class="hero-bg-video"
-      autoplay
-      loop
-      playsinline
-      muted
-      id="bg-video"
-    >
+    <video class="hero-bg-video" id="bg-video" autoplay loop muted playsinline>
       <source src="THIS IS 4K ANIME.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
+      Your browser does not support HTML5 video.
     </video>
     <div class="hero-overlay"></div>
 
-    <div class="hero-content container">
-      <div class="hero-text">
-        <h1>Hey, I'm <span>Shreesh Raut</span></h1>
-        <p>
-          Aspiring IT Student Focused on Coding.<br />
-          Passionate about Web Development &amp; Data Handling | Skilled in HTML, CSS, Java, and Python
-        </p>
-        <div class="hero-buttons">
-          <a href="#projects" class="btn btn-transparent">Explore Projects</a>
-          <a href="Shreesh.raut.cv.pdf" class="btn btn-outline" download>Download CV</a>
-        </div>
-        <button type="button" onclick="toggleSound()" id="sound-btn" class="sound-btn">🔇 Sound On</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT Section -->
-  <section id="about" class="section-about">
-    <div class="container">
-      <h2>About Me</h2>
-      <div class="about-wrapper">
-        <img src="p2.jpeg" alt="Shreesh profile photo" class="profile-pic" />
-        <p>
-          I am a dedicated and enthusiastic Bachelor of Information Technology (BIT) student with a strong foundation in both theoretical and practical aspects of the IT field.
-          Over the course of my academic journey, I have gained hands-on experience in data management, where I’ve developed a keen eye for organizing, analyzing, and maintaining
-          large sets of information with accuracy and efficiency.
-        </p>
-        <p>
-          In addition to my academic knowledge, I have worked as a BTL (Below The Line) coordinator, helping me build strong communication, planning, and teamwork skills by
-          engaging directly with people and managing campaigns at the ground level.
-        </p>
-        <p>
-          My true passion lies in web development and coding. I am proficient in HTML and CSS for front-end design and have built a strong understanding of programming through
-          Java and Python, allowing me to create interactive, functional, and efficient applications. I am always eager to learn more, take on new challenges, and apply my skills
-          to real-world projects that create meaningful digital experiences.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- SKILLS Section -->
-  <section id="skills" class="section-skills">
-    <div class="container">
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-card">Leadership</div>
-        <div class="skill-card">Public Speaking</div>
-        <div class="skill-card">Event Planning</div>
-        <div class="skill-card">Team Management</div>
-        <div class="skill-card">Editing &amp; Production</div>
-        <div class="skill-card">HTML, CSS, JAVA, PYTHON</div>
-        <div class="skill-card">Reporting &amp; Documentation</div>
-        <div class="skill-card">Training &amp; Development</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS Section -->
-  <section id="projects" class="section-projects">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="project-grid">
-        <div class="project-card">
-          <h3>IoT Developer – Smart Dustbin Project</h3>
-          <p>Designed and developed a smart dustbin using sensors and microcontrollers to automate lid opening and monitor waste levels.</p>
-        </div>
-        <div class="project-card">
-          <h3>Event Coordinator – Miss Nepal Contest 2024</h3>
-          <p>Managed event vendors and led the coordination team to ensure smooth and successful execution.</p>
-        </div>
-        <div class="project-card">
-          <h3>Football Tournament – Event Coordinator</h3>
-          <p>Handled overall coordination, managed teams, and ensured smooth execution of the tournament.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- GALLERY Section -->
-  <section id="gallery" class="section-gallery">
-    <div class="container">
-      <h2>Gallery</h2>
-      <div class="gallery-grid">
-        <div class="media-wrapper"><img src="photo 1.jpeg" alt="Gallery photo 1" /></div>
-        <div class="media-wrapper"><img src="photo 2.jpeg" alt="Gallery photo 2" /></div>
-        <div class="media-wrapper"><img src="photo 3.jpeg" alt="Gallery photo 3" /></div>
-        <div class="media-wrapper"><img src="celeb.jpeg" alt="Celebrity photo" /></div>
-        <div class="media-wrapper"><img src="mis nepalll.jpeg" alt="Miss Nepal" /></div>
-        <div class="media-wrapper"><img src="ancor.jpeg" alt="Anchoring event" /></div>
-        <div class="media-wrapper">
-          <video controls>
-            <source src="celebrate.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-        <div class="media-wrapper">
-          <video controls>
-            <source src="paktem.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-        <div class="media-wrapper">
-          <video controls>
-            <source src="pakkitol edit.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT Section -->
-  <section id="contact" class="section-contact">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <p class="contact-line">📧 shreeshraut11@gmail.com</a>
+    <div class="hero-content">
+      <h1>Hey, I'm <span>Shreesh Raut</span></h1>
+      <p>
+        Aspiring IT Student • Web Development &amp; Data Handling<br>
+        Skilled in HTML, CSS, Java &amp; Python
       </p>
-      <p class="contact-line">📱 +977-9819747813</a></p>
-      <p class="contact-line">📍 Kathmandu,Nepal</a></p>
-      <div class="socials">
-        <a href="https://www.linkedin.com/in/shreesh-raut-6035562ab/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://www.instagram.com/shreesh_raut11?igsh=Zmt1cmE3dDl0MW42" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://www.tiktok.com/@mr.shreesh11?_t=ZS-8y3FHaHtwdV&_r=1" target="_blank" rel="noopener">TikTok</a>
-        <a href="https://www.facebook.com/share/1C6XW5C7bk/?mibextid=qi2Omg" target="_blank" rel="noopener">Facebook</a>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-transparent">Explore Now</a>
+        <a href="Shreesh.raut.cv.pdf" class="btn btn-outline" download>Download CV</a>
+      </div>
+      <button type="button" class="sound-btn" id="sound-btn" onclick="toggleSound()">🔇 Sound On</button>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section section-about">
+    <h2>About Me</h2>
+    <div class="about-wrapper">
+      <img src="p2.jpeg" alt="Shreesh profile" class="profile-pic" />
+      <div class="about-text">
+        <p>I am a dedicated and enthusiastic Bachelor of Information Technology (BIT) student with a strong foundation in both theoretical and practical aspects of the IT field. I’ve gained hands‑on experience in data management—organizing, analyzing, and maintaining structured information accurately and efficiently.</p>
+        <p>I’ve also worked as a BTL (Below The Line) coordinator, building communication, planning, and teamwork skills through real‑world event and campaign execution.</p>
+        <p>My passion is coding and web development. I build using HTML &amp; CSS on the front end and develop logic with Java &amp; Python. I love learning, solving problems, and creating meaningful digital experiences.</p>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Skills -->
+  <section id="skills" class="section section-skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">Leadership</div>
+      <div class="skill-card">Public Speaking</div>
+      <div class="skill-card">Event Planning</div>
+      <div class="skill-card">Team Management</div>
+      <div class="skill-card">Editing &amp; Production</div>
+      <div class="skill-card">HTML, CSS, JAVA, PYTHON</div>
+      <div class="skill-card">Reporting &amp; Documentation</div>
+      <div class="skill-card">Training &amp; Development</div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section section-projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>IoT Developer – Smart Dustbin</h3>
+        <p>Sensor‑based lid automation + fill‑level monitoring using microcontrollers.</p>
+      </div>
+      <div class="project-card">
+        <h3>Miss Nepal Contest 2024 – Coordinator</h3>
+        <p>Led on‑ground vendor and team coordination for smooth event execution.</p>
+      </div>
+      <div class="project-card">
+        <h3>Football Tournament – Event Lead</h3>
+        <p>Managed teams, schedules &amp; logistic flow for tournament success.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery (kept original ratio style) -->
+  <section id="gallery" class="section section-gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <img src="photo 1.jpeg" alt="Gallery 1" />
+      <img src="photo 2.jpeg" alt="Gallery 2" />
+      <img src="photo 3.jpeg" alt="Gallery 3" />
+      <img src="celeb.jpeg" alt="Gallery 4" />
+      <img src="mis nepalll.jpeg" alt="Gallery 5" />
+      <img src="ancor.jpeg" alt="Gallery 6" />
+      <video controls>
+        <source src="celebrate.mp4" type="video/mp4" />
+      </video>
+      <video controls>
+        <source src="paktem.mp4" type="video/mp4" />
+      </video>
+      <video controls>
+        <source src="pakkitol edit.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section section-contact">
+    <h2>Contact Me</h2>
+    <p class="contact-line">📧 shreeshraut11@gmail.com</a></p>
+    <p class="contact-line">📱 +977‑9819747813</a></p>
+    <p class="contact-line">📍 Kathmandu,Nepal</a></p>
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/shreesh-raut-6035562ab/">LinkedIn</a>
+      <a href="https://www.instagram.com/shreesh_raut11?igsh=Zmt1cmE3dDl0MW42">Instagram</a>
+      <a href="https://www.tiktok.com/@mr.shreesh11?_t=ZS-8y3FHaHtwdV&_r=1">TikTok</a>
+      <a href="https://www.facebook.com/share/1C6XW5C7bk/?mibextid=qi2Omg">Facebook</a>
+    </div>
+  </section>
+
   <footer>
     <p>© 2025 Shreesh Raut • Portfolio</p>
   </footer>
